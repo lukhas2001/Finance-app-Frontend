@@ -1,0 +1,86 @@
+body {
+  font-family: "poppins", sans-serif;
+}
+
+.container,
+.transactions-list,
+.transaction-form {
+  width: 100%;
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding: 0 16px;
+}
+
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tf-input,
+.tf-textarea,
+.tf-select,
+.tf-btn {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.tf-textarea {
+  min-height: 48px;
+  resize: vertical;
+  /* overflow: auto; */
+}
+
+.form-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.tf-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* si tengo una lista de transacciones */
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 920px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* responsive: en pantallas chicas, apilar inputs */
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .tf-amount,
+  .tf-select,
+  .tf-btn{
+    flex: unset;
+    width: 100%;
+  }
+}
